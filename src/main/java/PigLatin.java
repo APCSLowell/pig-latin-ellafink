@@ -46,7 +46,7 @@ public class PigLatin {
 	    }
 	    
 	    //first letters qu
-	    if(str.substring(0,2).equals("qu") {
+	    if(str.substring(0,2).equals("qu")) {
 		    return str.substring(2)+ "quay";
 		    
 	    //all consonants
