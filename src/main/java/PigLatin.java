@@ -40,22 +40,14 @@ public class PigLatin {
     public String pigLatin(String sWord) {
         //precondition: sWord is a valid String of length greater than 0
         //postcondition: returns the pig latin equivalent of sWord
-	    
-	    //first letter vowell and first letter consonant
-	    if(findFirstVowell(sWord) == 0) {
-		    return sWord + "way";
-	    }else {
-		return sWord.substring(1)+sWordsubstring(0,1)+ "ay";
-	    }
-	    
-	    //first letters qu
-	    if(sWord.substring(0,2).equals("qu")) {
-		    return sWord.substring(2)+ "quay";
-	    }
-		    
-	    //all consonants
 	    if(findFirstVowel(sWord) == -1) {
 		    return sWord + "ay";
+	    }else if(findFirstVowell(sWord) == 0) {
+		    return sWord + "way";
+	    }else if(sWord.substring(0,2).equals("qu")) {
+		    return sWord.substring(2)+ "quay";
+	    }else if(findFirstVowell(sWord) != 0) {
+		return sWord.substring(1)+sWordsubstring(0,1)+ "ay";
 	    }else {
 		return "ERROR!";
 	    }
